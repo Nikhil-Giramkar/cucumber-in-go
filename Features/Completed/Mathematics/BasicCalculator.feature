@@ -43,7 +43,7 @@ multiple scenarios to test the basic Calculator
       | Message  | Positive Number |
 
   @goimpl
-  Scenario: Division of 2 natural numbers
+  Scenario: Invalid operation
     When I click on digit 45
     And I click on Exponent button
     And i click on second digit 15
