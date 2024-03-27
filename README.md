@@ -26,3 +26,5 @@ Run the following commands
     go mod tidy
     go test -v -run ^TestData$
 ```
+This will give results as below
+![Screenshot (311)](https://github.com/Nikhil-Giramkar/cucumber-in-go/assets/58767494/423b376d-989b-4900-a117-c0d4c32d9ebb)
