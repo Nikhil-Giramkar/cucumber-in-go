@@ -11,6 +11,7 @@ All scenarios to be covered and background setup for the tests ae written in Ghe
 # About the project
 
 This project demonstrates how Cucumber is used to test features in GoLang. <br>
+To use Cucumber framework I made use of 2 important packages
     <li>goDog - https://pkg.go.dev/github.com/cucumber/godog</li>
     <li>assistDog - https://pkg.go.dev/github.com/rdumont/assistdog</li>
 
