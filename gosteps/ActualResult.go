@@ -1,6 +1,6 @@
 package gosteps
 
 type ActualResult struct {
-	Answer  string
+	Answer  int
 	Message string
 }

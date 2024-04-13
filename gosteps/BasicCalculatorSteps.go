@@ -2,11 +2,9 @@ package gosteps
 
 import (
 	"context"
-	"strconv"
 
 	backend "github.com/Nikhil-Giramkar/cucumber-in-go/backend"
 	"github.com/cucumber/godog"
-	"github.com/rdumont/assistdog"
 )
 
 func (t TestContext) iClickOnDigit(ctx context.Context, firstNum int) (context.Context, error) {
@@ -25,7 +23,7 @@ func (t TestContext) iClickOnOperation(ctx context.Context, operation string) (c
 }
 
 func (t TestContext) calculationResultsAre(ctx context.Context, table *godog.Table) {
-	assist := assistdog.NewDefault()
+	ctx, assist := getAssistDogInstance(ctx)
 
 	//To remove the first row that contains heading of table
 	table = &godog.Table{
@@ -38,7 +36,7 @@ func (t TestContext) calculationResultsAre(ctx context.Context, table *godog.Tab
 
 	backendResult := backend.Calculate(firstNum, secondNum, operation)
 	actualRes := &ActualResult{
-		Answer:  strconv.Itoa(backendResult.Answer),
+		Answer:  backendResult.Answer,
 		Message: backendResult.Message,
 	}
 
